@@ -5,7 +5,24 @@ using Task_2;
 namespace Task_2
 {
     class Program
-    {    
+    {   
+        void task1(int x)
+        {
+            int[] arr = new int[x];
+
+            for (int i = 0; i < x; i++)
+            {
+                Random rnd = new Random();
+                arr[i] = rnd.Next(0, 100);
+                Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
+            for (int i = x - 1; i >= 0; i--)
+            {
+                Console.Write(arr[i] + " ");
+            }
+        }
+        
         void task2(int h, int w)
         {
             int[,] A = new int[h, w];
@@ -78,7 +95,6 @@ namespace Task_2
         static void Main()
         {
             Program A = new Program();
-            A.task34(5, 6);
            
         }
     }
